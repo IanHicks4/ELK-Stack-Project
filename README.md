@@ -1,2 +1,2 @@
-# ELK-Stack-Project
+# Cybersecurity-Portfolio
 Portfolio including projects and activities completed in cybersecurity bootcamp
