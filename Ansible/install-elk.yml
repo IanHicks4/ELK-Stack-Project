@@ -1,0 +1,26 @@
+---
+  - name: Configure Elk VM with Docker
+    hosts: elk
+    remote_user: azadmin
+    become: true
+    tasks:
+    - name: Install docker.io
+      apt:
+        update_cache: yes
+        name: docker.io
+        state: present
+
+    - name: Install pyhton3-pip
+      apt:
+        force_apt_get: yes
+        name: python3-pip
+        state: present
+
+    - name: Install Docker module
+      pip:
+        name: docker
+        state: present
+
+    - name: Use more memory
+      sysctl:
+        name: vm.max_map_count
